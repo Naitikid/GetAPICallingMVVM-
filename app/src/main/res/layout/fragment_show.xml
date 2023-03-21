@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".show.fragment.ShowFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageviewshow"
+                android:layout_width="@dimen/dimen0dp"
+                android:layout_height="@dimen/dimen250dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textviewoffers"
+                android:layout_width="@dimen/dimen0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageviewshow" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linearPromocode"
+                android:layout_width="@dimen/dimen0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen32dp"
+                android:background="@drawable/promocodeboder"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textviewoffers">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textviewpromocode"
+                    android:layout_width="@dimen/dimen0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_promocode"
+                    android:padding="@dimen/dimen16dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen16sp"
+                    android:textStyle="bold"
+                    android:text="@string/promocode" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textviewpromovalue"
+                    android:layout_width="@dimen/dimen0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dimen16dp"
+                    android:textSize="@dimen/dimen16sp"
+                    tools:text="@string/check" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textviewStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dimen16dp"
+                android:layout_marginTop="@dimen/dimen16dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/textviewStartDateValue"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linearPromocode"
+                android:text="@string/start_date" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textviewStartDateValue"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dimen16dp"
+                app:layout_constraintStart_toEndOf="@id/textviewStartDate"
+                app:layout_constraintTop_toBottomOf="@id/textviewStartDate"
+                app:layout_constraintTop_toTopOf="@id/textviewStartDate"
+                tools:text="@string/check" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textviewEndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dimen16dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/textviewEndDateValue"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@id/textviewStartDate"
+                app:layout_constraintTop_toBottomOf="@id/textviewStartDate"
+                android:text="@string/end_date" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textviewEndDateValue"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dimen16dp"
+                app:layout_constraintStart_toEndOf="@id/textviewEndDate"
+                app:layout_constraintTop_toTopOf="@id/textviewEndDate"
+                tools:text="@string/check" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dimen16dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/txtCategoryValue"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@id/textviewEndDate"
+                app:layout_constraintTop_toBottomOf="@id/textviewEndDate"
+                android:text="@string/category" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtCategoryValue"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dimen16dp"
+                app:layout_constraintStart_toEndOf="@id/txtCategory"
+                app:layout_constraintTop_toTopOf="@id/txtCategory"
+                tools:text="@string/check" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dimen16dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/txtCategory"
+                app:layout_constraintTop_toBottomOf="@id/txtCategory"
+                android:text="@string/description" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtDescriptionValue"
+                android:layout_width="@dimen/dimen0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/txtDescription"
+                app:layout_constraintTop_toBottomOf="@id/txtDescription"
+                tools:text="@string/check" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
